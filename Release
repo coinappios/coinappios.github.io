@@ -1,0 +1,9 @@
+Origin: CoinAppIOS
+Label: CoinAppIOS
+Suite: main
+Version: 1.0
+Codename: CoinAppIOS
+Architectures: iphoneos-arm
+Components: main
+Description: CoinAppIOS Repo
+Support: coinappios@gmail.com
