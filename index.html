@@ -18,13 +18,11 @@
 
 
 	<style>
-		.content {
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			-webkit-transform: translate(-50%, -50%);
-			transform: translate(-50%, -50%);
+		body {
+			background: #f1ecec;
 		}
+
+
 
 		.custom {
 			width: 180px !important;
@@ -33,15 +31,72 @@
 		img {
 			border-radius: 50%;
 		}
+
+
+
+
+
+		.faq {
+			padding: 60px 0;
+		}
+
+		.faq .faq-list {
+			padding: 0;
+			list-style: none;
+		}
+
+		.faq .faq-list li {
+			background: #23212D;
+			margin-bottom: 10px;
+			border-radius: 10px;
+			padding: 10px 40px;
+		}
+
+		.faq .faq-list a {
+			display: block;
+			position: relative;
+			font-size: 20px;
+			font-weight: 100;
+			color: #DF796D;
+			text-decoration: none;
+		}
+
+		.faq .faq-list i {
+			font-size: 16px;
+			position: absolute;
+			left: -25px;
+			top: 6px;
+			transition: 1s;
+		}
+
+		.faq-title {
+			text-align: center;
+			font-size: 17px;
+			border-bottom: 2px dashed #23212D;
+			margin-bottom: 30px;
+			padding-bottom: 10px;
+			color: #000000;
+		}
+
+		.faq .faq-list p {
+			padding-top: 5px;
+			margin-bottom: 20px;
+			font-size: 18px;
+			color: #fff;
+		}
+
+		.collapsed i.fas.fa-arrow-up {
+			transform: rotate(180deg);
+		}
 	</style>
 </head>
 
 
 
 <body>
-	<div class="content text-center">
-		<h1 class="text-center">CoinAppIOS</h1><img src="CydiaIcon.png">
-		<h4 class="text-center">Add to Manager</h4>
+	<div class="text-center">
+		<h1 class="text-center" class="text-center" style="color:#23212D">CoinAppIOS</h1><img src="CydiaIcon.png">
+		<h4 class="text-center" style="color:#23212D">Add to Manager</h4>
 		<a class="btn btn-default btn-lg custom"
 			href="cydia://url/https://cydia.saurik.com/api/share#?source=https://coinappios.github.io"
 			style="background-color: #DF796D; color:#23212D"><i class="fas fa-box-open"></i>Add to Cydia</a>
@@ -62,6 +117,77 @@
 		</a>
 
 	</div>
+
+
+
+
+
+	<section class="faq">
+		<div class="container">
+			<div class="faq-title">
+				<h2>F.A.Q</h2>
+			</div>
+			<ul class="faq-list">
+
+				<li data-aos="fade-up" data-aos-delay="400" class="aos-init aos-animate">
+					<a data-toggle="collapse" href="#faq1" class="collapsed">What is CoinAppIOS?<i
+							class="fas fa-arrow-up"></i></a>
+					<div id="faq1" class="collapse" data-parent=".faq-list">
+						<p>
+							a bot
+						</p>
+					</div>
+				</li>
+
+				<li data-aos="fade-up" data-aos-delay="100" class="aos-init aos-animate">
+					<a data-toggle="collapse" class="collapsed" href="#faq2" aria-expanded="false">How do i install?<i
+							class="fas fa-arrow-up"></i></a>
+					<div id="faq2" class="collapse" data-parent=".faq-list">
+						<p>
+							...
+						</p>
+					</div>
+				</li>
+
+				<li data-aos="fade-up" data-aos-delay="200" class="aos-init aos-animate">
+					<a data-toggle="collapse" href="#faq3" class="collapsed">Where can i ask questions?<i
+							class="fas fa-arrow-up"></i></a>
+					<div id="faq3" class="collapse" data-parent=".faq-list">
+						<p>
+							...
+						</p>
+					</div>
+				</li>
+
+
+				<li data-aos="fade-up" data-aos-delay="200" class="aos-init aos-animate">
+					<a data-toggle="collapse" href="#faq4" class="collapsed">Do i need an AutoTouch License??<i
+							class="fas fa-arrow-up"></i></a>
+					<div id="faq4" class="collapse" data-parent=".faq-list">
+						<p>
+							...
+						</p>
+					</div>
+				</li>
+
+
+				<li data-aos="fade-up" data-aos-delay="300" class="aos-init aos-animate">
+					<a data-toggle="collapse" href="#faq5" class="collapsed">Where can i buy?<i
+							class="fas fa-arrow-up"></i></a>
+					<div id="faq5" class="collapse" data-parent=".faq-list">
+						<p>
+							...
+						</p>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</section>
+
+
+
+
 </body>
 
 </html>
