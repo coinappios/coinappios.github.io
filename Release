@@ -3,7 +3,7 @@ Label: CoinAppIOS
 Suite: main
 Version: 1.0
 Codename: CoinAppIOS
-Architectures: iphoneos-arm
+Architectures: iphoneos-arm iphoneos-arm64
 Components: main
 Description: CoinAppIOS Repo
 Support: coinappios@gmail.com
