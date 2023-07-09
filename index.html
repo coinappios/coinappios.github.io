@@ -98,6 +98,55 @@
 		.collapsed i.fas.fa-arrow-up {
 			transform: rotate(180deg);
 		}
+
+
+		.features {
+			padding: 60px 0;
+		}
+
+		.feature-card {
+			background: #fff;
+			border-radius: 15px;
+			padding: 20px;
+			margin: 20px 0;
+			box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+			text-align: center;
+			opacity: 0;
+			/* hide by default */
+			transition: all 1s ease-out;
+			/* transition instead of animation */
+		}
+
+		.feature-card i {
+			color: #DF796D;
+		}
+
+		.feature-card h4 {
+			margin: 15px 0;
+			color: #23212D;
+		}
+
+		.feature-card p {
+			color: #23212D;
+		}
+
+		@keyframes slideInFromRight {
+			0% {
+				transform: translateX(100%);
+				opacity: 0;
+			}
+
+			100% {
+				transform: translateX(0);
+				opacity: 1;
+			}
+		}
+
+		.slide-in {
+			opacity: 1;
+			/* show when in viewport and has .slide-in class */
+			animation: slideInFromRight 1s forwards;
+		}
 	</style>
 </head>
 
@@ -145,6 +194,87 @@
 		</a>
 		<p><small>Will not DM you first!</small></p>
 	</div>
+
+
+	<section class="features">
+		<div class="container">
+			<h2 class="text-center" style="color:#23212D">Feature List</h2>
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="feature-card">
+						<i class="fas fa-bars fa-2x"></i>
+						<h4>Integrated Menu</h4>
+						<p>An integrated menu for streamlined navigation and access to a wealth of functionalities.</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="feature-card">
+						<i class="fas fa-gamepad fa-2x"></i>
+						<h4>Mini Games Master</h4>
+						<p>Automatic completion of all mini-game types, ensuring you always get the maximum rewards.</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="feature-card">
+						<i class="fas fa-award fa-2x"></i>
+						<h4>Smart Background Rewards Collection</h4>
+						<p>Systematic and efficient collection of all background rewards, saving you time and effort.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="feature-card">
+						<i class="fas fa-tv fa-2x"></i>
+						<h4>Ad Strategy</h4>
+						<p>Smart feature to skip ads with rewards lower than the set value, maximizing your returns.</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="feature-card">
+						<i class="fas fa-robot fa-2x"></i>
+						<h4>AI Ad Management</h4>
+						<p>Employs a well-trained object detection model to automatically close ads.</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="feature-card">
+						<i class="fas fa-fast-forward fa-2x"></i>
+						<h4>Fast Ad Playback</h4>
+						<p>Feature to speed up ad playback, maximise your rewards.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="feature-card">
+						<i class="fas fa-clock fa-2x"></i>
+						<h4>Sleep Timer</h4>
+						<p>A handy sleep timer that ensures your device pauses for a set time, helping you manage device
+							usage.</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="feature-card">
+						<i class="fas fa-car fa-2x"></i>
+						<h4>Driving Mode</h4>
+						<p>Watch ads and auto-mine on the go with the specialized Driving Mode, making the most of your
+							travel time.</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="feature-card">
+						<i class="fas fa-mobile-alt fa-2x"></i>
+						<h4>Adaptive Screen Compatibility</h4>
+						<p>Enjoy a seamless experience with full support for both iPad and iPhone, adapting effortlessly
+							to any screen size.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
 
 
 	<section class="faq">
@@ -245,6 +375,23 @@
 	</section>
 
 
+	<script>
+		let observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add("slide-in");
+					observer.unobserve(entry.target);
+				}
+			});
+		}, { threshold: 0.1 });
+
+		let cards = document.querySelectorAll(".feature-card");
+		cards.forEach((card) => {
+			observer.observe(card);
+		});
+
+
+	</script>
 
 
 </body>
