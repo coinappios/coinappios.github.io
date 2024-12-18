@@ -28,171 +28,50 @@
 		integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+	<link rel="stylesheet" href="styles.css">
 
-	<style>
-		body {
-			background: #f1ecec;
-		}
-
-		.custom {
-			width: 180px !important;
-		}
-
-		img {
-			border-radius: 50%;
-		}
-
-
-
-
-
-		.faq {
-			padding: 60px 0;
-		}
-
-		.faq .faq-list {
-			padding: 0;
-			list-style: none;
-		}
-
-		.faq .faq-list li {
-			background: #23212D;
-			margin-bottom: 10px;
-			border-radius: 10px;
-			padding: 10px 40px;
-		}
-
-		.faq .faq-list a {
-			display: block;
-			position: relative;
-			font-size: 20px;
-			font-weight: 100;
-			color: #DF796D;
-			text-decoration: none;
-		}
-
-		.faq .faq-list i {
-			font-size: 16px;
-			position: absolute;
-			left: -25px;
-			top: 6px;
-			transition: 1s;
-		}
-
-		.faq-title {
-			text-align: center;
-			font-size: 17px;
-			border-bottom: 2px dashed #23212D;
-			margin-bottom: 30px;
-			padding-bottom: 10px;
-			color: #000000;
-		}
-
-		.faq .faq-list p {
-			padding-top: 5px;
-			margin-bottom: 20px;
-			font-size: 18px;
-			color: #fff;
-		}
-
-		.collapsed i.fas.fa-arrow-up {
-			transform: rotate(180deg);
-		}
-
-
-		.features {
-			padding: 60px 0;
-		}
-
-		.feature-card {
-			background: #fff;
-			border-radius: 15px;
-			padding: 20px;
-			margin: 20px 0;
-			box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-			text-align: center;
-			opacity: 0;
-			/* hide by default */
-			transition: all 1s ease-out;
-			/* transition instead of animation */
-		}
-
-		.feature-card i {
-			color: #DF796D;
-		}
-
-		.feature-card h4 {
-			margin: 15px 0;
-			color: #23212D;
-		}
-
-		.feature-card p {
-			color: #23212D;
-		}
-
-		@keyframes slideInFromRight {
-			0% {
-				transform: translateX(100%);
-				opacity: 0;
-			}
-
-			100% {
-				transform: translateX(0);
-				opacity: 1;
-			}
-		}
-
-		.slide-in {
-			opacity: 1;
-			/* show when in viewport and has .slide-in class */
-			animation: slideInFromRight 1s forwards;
-		}
-	</style>
 </head>
 
 
 
 <body>
-	<div class="text-center">
-		<h1 class="text-center" class="text-center" style="color:#23212D">CoinAppIOS</h1><img src="CydiaIcon.png">
-		<h4 class="text-center" style="color:#23212D">Add to Manager</h4>
+	<div class="header-section">
+		<div class="text-center">
+			<h1>CoinAppIOS</h1>
+			<img src="CydiaIcon.png" alt="CoinAppIOS Logo">
+			<h4>Add to Package Manager</h4>
+			
+			<div class="btn-container">
+				<a class="btn custom-btn package-btn"
+					href="cydia://url/https://cydia.saurik.com/api/share#?source=https://coinappios.github.io"
+					style="background-color: #DF796D; color:#23212D"><i class="fas fa-box-open"></i>Add to Cydia</a>
 
-		<a class="btn btn-default btn-lg custom"
-			href="cydia://url/https://cydia.saurik.com/api/share#?source=https://coinappios.github.io"
-			style="background-color: #DF796D; color:#23212D"><i class="fas fa-box-open"></i>Add to Cydia</a>
+				<a class="btn custom-btn package-btn" href="sileo://source/https://coinappios.github.io"
+					style="background-color: #DF796D; color:#23212D"><i class="fas fa-box-open"></i>Add
+					to Sileo
+				</a>
 
-		<a class="btn btn-default btn-lg custom" href="sileo://source/https://coinappios.github.io"
-			style="background-color: #DF796D; color:#23212D"><i class="fas fa-box-open"></i>Add
-			to Sileo
-		</a>
+				<a class="btn custom-btn package-btn" href="installer://add/repo=https://coinappios.github.io"
+					style="background-color: #DF796D; color:#23212D"><i class="fas fa-box-open"></i>Add
+					to Installer
+				</a>
 
-		<a class="btn btn-default btn-lg custom" href="installer://add/repo=https://coinappios.github.io"
-			style="background-color: #DF796D; color:#23212D"><i class="fas fa-box-open"></i>Add
-			to Installer
-		</a>
-
-		<a class="btn btn-default btn-lg custom" href="zbra://sources/add/https://coinappios.github.io"
-			style="background-color: #DF796D; color:#23212D"><i class="fas fa-box-open"></i>Add
-			to Zebra
-		</a>
-
+				<a class="btn custom-btn package-btn" href="zbra://sources/add/https://coinappios.github.io"
+					style="background-color: #DF796D; color:#23212D"><i class="fas fa-box-open"></i>Add
+					to Zebra
+				</a>
+			</div>
+		</div>
 	</div>
 
 
 
 
 	<div class="text-center">
-		<h4 class="text-center" style="color:#23212D">Contact Us</h4>
-
-		<a class="btn btn-default btn-lg custom" href="https://t.me/+8wFyT6j8LodlNWE0"
-			style="background-color: #0088cc; color:#fff"><i class="fa-brands fa-telegram" style="color: #fff;"></i>
-			Group</a>
-
-		<a class="btn btn-default btn-lg custom" href="https://t.me/TazsMining"
-			style="background-color: #0088cc; color:#fff"><i class="fa-brands fa-telegram" style="color: #fff;"></i>
-			Direct
+		<h4 class="text-center" style="color:#23212D">Join Our Community</h4>
+		<a class="btn custom-btn telegram-btn" href="https://t.me/+8wFyT6j8LodlNWE0">
+			<i class="fa-brands fa-telegram" style="color: #fff;"></i> Telegram Group
 		</a>
-		<p><small>Will not DM you first!</small></p>
 	</div>
 
 
@@ -322,13 +201,12 @@
 				</li>
 
 				<li data-aos="fade-up" data-aos-delay="200" class="aos-init aos-animate">
-					<a data-toggle="collapse" href="#faq4" class="collapsed">Where can i ask questions?<i
+					<a data-toggle="collapse" href="#faq4" class="collapsed">Where can i get support?<i
 							class="fas fa-arrow-up"></i></a>
 					<div id="faq4" class="collapse" data-parent=".faq-list">
 						<p>
 							You can join our telegram <a style="display: inline;"
-								href="https://t.me/+8wFyT6j8LodlNWE0">Group</a> or ask questions <a
-								style="display: inline;" href="https://t.me/TazsMining">Directly</a>.
+								href="https://t.me/+8wFyT6j8LodlNWE0">community group</a> where our helpful members and moderators can assist you.
 						</p>
 					</div>
 				</li>
@@ -339,33 +217,12 @@
 							class="fas fa-arrow-up"></i></a>
 					<div id="faq5" class="collapse" data-parent=".faq-list">
 						<p>
-							We do not support cracked version, please note this before asking questions. The bot script
-							runs on AutoTouch, to obtain an autotouch license:<br>
+							We do not support cracked versions. The bot script runs on AutoTouch, to obtain an autotouch license:<br>
 							1. Open AutoTouch app.<br><br>
 							2. Go to AutoTouch settings.<br><br>
 							3. Go to license.<br><br>
 							4. Purchase a license (Basic $9.99)<br><br>
 							5. Press Download license at top right.<br>
-						</p>
-					</div>
-				</li>
-
-
-				<li data-aos="fade-up" data-aos-delay="300" class="aos-init aos-animate">
-					<a data-toggle="collapse" href="#faq6" class="collapsed">Where can i buy?<i
-							class="fas fa-arrow-up"></i></a>
-					<div id="faq6" class="collapse" data-parent=".faq-list">
-						<p>
-							We accept Crypto and Paypal.<br><br>
-							BTC: 3CYxxbZa28KAwc6J1rGZF6YcySd57Hc9FR<br>
-							XYO: 0xBBE8fe89B9dEc9Cc1f73f99794A935Ace876A05C<br><br>
-							After payment please contact <a style="display: inline;"
-								href="https://t.me/TazsMining">Directly</a><br><br>
-							To use PayPal please contact @TazsMining <a style="display: inline;"
-								href="https://t.me/TazsMining">Directly</a><br>
-							Important! We will not DM you first!<br><br>
-							Costs $120 per device, for every other device it will be £100.<br>
-							Example: 3 devices will cost $320 instead of $360
 						</p>
 					</div>
 				</li>
@@ -393,6 +250,16 @@
 
 	</script>
 
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-content">
+				<a href="#" class="footer-logo">CoinAppIOS</a>
+				<div class="footer-divider"></div>
+				<p class="footer-text">Automating your COIN experience</p>
+				<p class="copyright">© 2024 CoinAppIOS. All rights reserved.</p>
+			</div>
+		</div>
+	</footer>
 
 </body>
 
